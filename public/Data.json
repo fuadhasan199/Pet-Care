@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/fdhSX6Ct/winter-coat-dog.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo to protect paws from frost.",
+    "image": "https://i.ibb.co.com/67Rhy93P/matthieu-lemarchal-wx2n-Ie4-YIj-I-unsplash.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Pet Bed Setup",
+    "providerName": "WarmPaws Supplies",
+    "providerEmail": "support@warmpaws.com",
+    "price": 40,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Provide your pets with a cozy heated bed to ensure warmth during cold winter nights.",
+    "image": "https://i.ibb.co.com/93qFdPKC/Heated-Pet-Bed-Setup.jpg",
+    "category": "Comfort"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Nutritional Winter Diet Plan",
+    "providerName": "HealthyTail Nutritionists",
+    "providerEmail": "contact@healthytail.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "Special winter diet consultation and meal plan to boost your pet’s immunity and energy.",
+    "image": "https://i.ibb.co.com/7Jv0DHTt/Nutritional-Winter-Diet-Plan.jpg",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Winter Walk Protection Kit",
+    "providerName": "SnowySteps Pet Gear",
+    "providerEmail": "service@snowysteps.com",
+    "price": 18,
+    "rating": 4.8,
+    "slotsAvailable": 7,
+    "description": "Includes winter boots and reflective jackets to keep your pet safe during cold outdoor walks.",
+    "image": "https://i.ibb.co.com/d0mBf03n/Winter-Walk-Protection-Kit.jpg",
+    "category": "Accessories"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Cozy Indoor Play Session",
+    "providerName": "PetJoy Activity Center",
+    "providerEmail": "fun@petjoy.com",
+    "price": 35,
+    "rating": 5.0,
+    "slotsAvailable": 3,
+    "description": "Engaging indoor games and activities to keep your pets active and happy during the cold season.",
+    "image": "https://i.ibb.co.com/tpkQrHz7/Cozy-Indoor-Play-Session.jpg",
+    "category": "Activity"
+  }
+]
