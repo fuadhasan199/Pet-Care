@@ -21,13 +21,15 @@ const Home = () => {
 
         <div className=' container mx-auto '>  
         
-          <div className="mt-12"> 
-                     <HeroSwiper></HeroSwiper>
-           </div> 
+           <div className="mt-12">
+    <h2 className='text-3xl font-bold text-center mb-4'>Welcome to Winter Pet Care!</h2>
+    <p className='text-center text-gray-600 mb-6'>Keep your pets cozy and healthy this winter with our expert services.</p>
+    <HeroSwiper />
+  </div>
        
-            
-          <div className='flex flex-cols-1 flex-wrap md:flex-cols-3 gap-5 mt-5  '> 
-            
+            <h2 className='mt-6 text-center font-bold text-5xl'>OUR SERVICES</h2>
+          <div className='flex flex-wrap gap-5 mt-5 justify-center '> 
+
       { 
       
          cards.map(card=>( 
@@ -59,7 +61,7 @@ const Home = () => {
        <Tips></Tips>
         </div> 
 
-         <h2 className='text-center text-5xl mt-7 font-bold'>Meet Our Expert Vets</h2> 
+         <h2 className='text-5xl md:text-6xl font-bold text-white bg-black px-1 py-5 text-center inline-block ml-[280px]  '>Meet Our Expert Vets</h2> 
 
            <div className="flex flex-wrap gap-3 mt-10">
 
