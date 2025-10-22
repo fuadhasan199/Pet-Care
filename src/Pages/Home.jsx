@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router';
 import doc1 from '../doc 1.jpg' 
 import doc2 from '../Doc2.jpg'
 import doc3 from '../Doc3.jpg'
+import Tips from '../Tips';
 const Home = () => { 
 
   const cards=useLoaderData() 
@@ -33,7 +34,7 @@ const Home = () => {
           <button className='btn flex mx-auto mt-2'>View Details</button>
 
 
-
+  
             </div>
          )
          
@@ -42,7 +43,9 @@ const Home = () => {
          )
      
 
-      } 
+      }  
+
+       <Tips></Tips>
         </div> 
 
          <h2 className='text-center text-5xl mt-7 font-bold'>Meet Our Expert Vets</h2> 
