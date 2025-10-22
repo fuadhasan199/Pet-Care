@@ -4,6 +4,7 @@ import doc1 from '../doc 1.jpg'
 import doc2 from '../Doc2.jpg'
 import doc3 from '../Doc3.jpg'
 import Tips from '../Tips';
+import HeroSwiper from '../HeroSwiper';
 const Home = () => { 
 
   const cards=useLoaderData() 
@@ -13,10 +14,20 @@ const Home = () => {
 
 
 
-    return (
-        <div className=' container mx-auto '>
+    return ( 
+
+  
+
+
+        <div className=' container mx-auto '>  
+        
+          <div className="mt-12"> 
+                     <HeroSwiper></HeroSwiper>
+           </div> 
+       
             
           <div className='flex flex-cols-1 flex-wrap md:flex-cols-3 gap-5 mt-5  '> 
+            
       { 
       
          cards.map(card=>( 
