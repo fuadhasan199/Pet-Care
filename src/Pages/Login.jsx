@@ -2,12 +2,16 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { IoIosLogIn } from "react-icons/io"; 
 import { FaGoogle } from "react-icons/fa";
-import {  signInWithEmailAndPassword } from 'firebase/auth';
+import {  signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth } from '../firebase.confiq'; 
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast'; 
+import { GoogleAuthProvider } from "firebase/auth";
 
 
 const Login = () => { 
+
+
+
   const HandleClick = (e) => {
     e.preventDefault(); 
     console.log('btn click');
@@ -26,7 +30,26 @@ const Login = () => {
     toast.error('Invalid email or password');
   });
 
-  };
+  }; 
+
+  const handleGoogleBtn=()=>{
+     const provider = new GoogleAuthProvider(); 
+      signInWithPopup(auth, provider) 
+ .then(res=>{
+    console.log(res) 
+     toast.success('Google auth succes')
+ }) 
+ 
+ .catch(error=>{
+    console.log(error) 
+    toast.error("Google auth something wrong")
+ })
+ 
+
+  }
+
+
+
 
  
   return (
@@ -58,7 +81,7 @@ const Login = () => {
               </button> 
 
               <button type="button" className="btn btn-neutral mt-1">
-                <FaGoogle size={18} /> Continue with Google
+                <FaGoogle size={18} onClick={handleGoogleBtn} /> Continue with Google
               </button>
             </form>
           </div>
