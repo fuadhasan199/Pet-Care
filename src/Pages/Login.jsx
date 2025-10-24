@@ -23,7 +23,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
   .then(res => {
     console.log(res);
-    toast.success('Login successful!');
+    toast.success('Login successful ,Please Click service button');
   })
   .catch(error => {
     console.log(error);
