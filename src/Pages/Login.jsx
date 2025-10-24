@@ -32,7 +32,8 @@ const Login = () => {
 
   }; 
 
-  const handleGoogleBtn=()=>{
+  const handleGoogleBtn=()=>{ 
+  
      const provider = new GoogleAuthProvider(); 
       signInWithPopup(auth, provider) 
  .then(res=>{
@@ -80,8 +81,8 @@ const Login = () => {
                 <IoIosLogIn size={18} /> Login
               </button> 
 
-              <button type="button" className="btn btn-neutral mt-1">
-                <FaGoogle size={18} onClick={handleGoogleBtn} /> Continue with Google
+              <button type="button" className="btn btn-neutral mt-1" onClick={handleGoogleBtn}>
+                <FaGoogle size={18}  /> Continue with Google
               </button>
             </form>
           </div>

@@ -26,14 +26,14 @@ const Navbar = () => {
       <li><NavLink to={'/'} className={({isActive})=> isActive ? 'text-blue-500 font-bold underline': "" }>Home</NavLink></li>
       <li>
      
-         <NavLink to={'/Service'} className={({isActive})=> isActive ? 'text-blue-500 font-bold underline': "" }>Services</NavLink>
+         <NavLink to={'/service'} className={({isActive})=> isActive ? 'text-blue-500 font-bold underline': "" }>Services</NavLink>
        
       </li>
     <li> <NavLink to={'/my-profile'} className={({isActive})=> isActive ? 'text-blue-500 font-bold underline': "" }>My Profile</NavLink></li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Log-in</a>
+    <NavLink to={'/login'} className={'btn'}>Log In</NavLink>
   </div>
 </div>
     );

@@ -1,26 +1,16 @@
-import React, { Children, useContext } from 'react';
-import { AuthContext } from '../Provaider/AuthProvider'; 
-import { Navigate, useLocation } from 'react-router';
 
+import React, { createContext, useState } from 'react';
 
-const PrivateRoute = ({children}) => { 
+export const AuthContext = createContext();
 
-const { user } = useContext(AuthContext)
+const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null); 
 
- const location =useLocation() 
-
- if(!user) {
-    return <Navigate to={'/login'}></Navigate>
- } 
-
- return children 
-
-
-
-
-
-
-   
+  return (
+    <AuthContext.Provider value={{ user, setUser }}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
-export default PrivateRoute;
+export default AuthProvider;
