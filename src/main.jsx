@@ -1,5 +1,7 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+ import { createRoot } from 'react-dom/client' 
+ import React from 'react';
+import ReactDOM from 'react-dom/client';
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom' 
@@ -7,7 +9,7 @@ import Mainlayout from './layout/Mainlayout.jsx'
 import Home from './Pages/Home.jsx'
 import Service from './Pages/Service.jsx'
 import MyProfile from './Pages/MyProfile.jsx'
-import AuthProvider from './Provaider/ServiceProvider.jsx'
+import AuthProvider from './Provaider/AuthProvider.jsx'
 import Login from './Pages/Login.jsx'
 import SignUp from './Pages/SignUp.jsx'
 import PrivateRoute from './Routes/PrivateRoute.jsx'
@@ -57,12 +59,12 @@ const router=createBrowserRouter(
   ]
 )
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode> 
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
     <AuthProvider> 
-       <ServiceProvider> 
+      <ServiceProvider> 
         <RouterProvider router={router} />
-     </ServiceProvider>
+      </ServiceProvider>
     </AuthProvider>
-  </StrictMode>,
-)
+  </React.StrictMode>
+);

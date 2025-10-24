@@ -31,7 +31,7 @@ const Home = () => {
               <p className="font-bold text-green-500">Rating: {card.rating}</p>
               <p className="font-bold text-green-600">Price: {card.price}$</p>
             </div>
-            <button className="btn flex mx-auto mt-2">Add to Service</button>
+            <button className="btn flex mx-auto mt-2">Details</button>
           </div>
         ))}
         <Tips />

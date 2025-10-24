@@ -1,16 +1,20 @@
+import { useContext } from "react";
+import { Navigate, useLocation } from "react-router-dom";
+import { AuthContext } from "../Provaider/AuthProvider";
 
-import React, { createContext, useState } from 'react';
+const PrivateRoute = ({ children }) => {
+  const { user, loading } = useContext(AuthContext);
+  const location = useLocation();
 
-export const AuthContext = createContext();
+  if (loading) {
+    return <div>Loading...</div> 
+  }
 
-const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null); 
+  if (!user) {
+    return <Navigate to="/login" state={{ from: location }} replace />
+  }
 
-  return (
-    <AuthContext.Provider value={{ user, setUser }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return children;
 };
 
-export default AuthProvider;
+export default PrivateRoute;

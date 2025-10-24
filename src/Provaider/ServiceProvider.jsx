@@ -5,7 +5,14 @@ export const ServiceContext = createContext();
 
 const ServiceProvider = ({ children }) => {
   const [services, setServices] = useState([]);
-  const [selectedServices, setSelectedServices] = useState([]);
+  const [selectedServices, setSelectedServices] = useState([]); 
+
+  const removeService=(id)=>{
+      const updateServices=selectedServices.filter(
+        (services)=>services.serviceId !==id  ) 
+        setSelectedServices(updateServices)
+     
+  }
 
  
   useEffect(() => {
@@ -21,7 +28,7 @@ const ServiceProvider = ({ children }) => {
   };
 
   return (
-    <ServiceContext.Provider value={{ services, selectedServices, addService }}>
+    <ServiceContext.Provider value={{ services, selectedServices, addService,removeService }}>
       {children}
     </ServiceContext.Provider>
   );

@@ -1,9 +1,14 @@
 import React, { useContext } from 'react';
 import { ServiceContext } from '../Provaider/ServiceProvider';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Service = () => {
-  const { selectedServices } = useContext(ServiceContext);
-
+  const { selectedServices,removeService } = useContext(ServiceContext); 
+  const handleBooking=(id)=>{
+    toast.success("Booking Done 😊") 
+    removeService(id)
+  }
+   
   return (
     <div className="container mx-auto p-6">
       <h2 className="text-4xl font-bold text-center mb-6">Our Selected Services</h2>
@@ -17,13 +22,23 @@ const Service = () => {
           <div key={service.serviceId} className="bg-gray-200 rounded-md shadow-md p-4">
             <img src={service.image} alt={service.serviceName} className="w-full h-40 object-cover rounded-md" />
             <p className="font-light mt-2">{service.serviceName}</p>
-            <div className="flex justify-between m-2">
-              <p className="font-bold text-green-500">Rating: {service.rating}</p>
-              <p className="font-bold text-green-600">Price: {service.price}$</p>
-            </div>
+             <div className="">
+                    <fieldset className="fieldset mt-2 bg-base-200 border-base-300 rounded-box w-xs border p-4">
+            
+
+  <label className="label">Name</label>
+  <input type="email" className="input" placeholder="Your Name" />
+
+  <label className="label">Email</label>
+  <input type="password" className="input" placeholder="Your Email" />
+
+  <button className="btn btn-neutral mt-4" onClick={()=>handleBooking(service.serviceId)}>Book Now</button>
+</fieldset>
+             </div>
           </div>
         ))}
-      </div>
+      </div> 
+     <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
 };
